@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "When we need a lot of concatenations, String will work faster than a StringBuilder."
+    is_correct: false
+  - text: "When we need a lot of concatenations, String and StringBuilder will work\
+    \ almost equally fast."
+    is_correct: false
+  - text: "When we need a lot of concatenations, StringBuilder will work faster than\
+    \ a String."
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 26 Mar 2024 13:31:34 UTC"
+record: -1
+selected_options:
+  - 2
+custom_name: Statements
+local_check: true

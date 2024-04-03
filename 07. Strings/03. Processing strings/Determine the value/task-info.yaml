@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: '"aaabbcccdaa"'
+    is_correct: false
+  - text: '" abcda"'
+    is_correct: true
+  - text: '"aaabb"'
+    is_correct: false
+  - text: '" aaabbcccdaa"'
+    is_correct: false
+  - text: '"abcda "'
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 26 Mar 2024 12:17:16 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Determine the value
+local_check: true

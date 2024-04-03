@@ -1,0 +1,92 @@
+type: edu
+custom_name: Create an email
+files:
+  - name: src/EmployeeManagement.java
+    visible: true
+    text: |-
+      import java.util.Scanner;
+      
+      public class EmployeeManagement {
+      
+          // Don't change the code below
+          public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              String name = scanner.next();
+              String surname = scanner.next();
+      
+              String completeEmail = // write your code here
+      
+              System.out.println(completeEmail);
+          }
+      }
+    learner_created: false
+  - name: test/MainTest.java
+    visible: false
+    text: |-
+      import org.junit.After;
+      import org.junit.Before;
+      import org.junit.Test;
+      
+      import java.io.ByteArrayInputStream;
+      import java.io.ByteArrayOutputStream;
+      import java.io.InputStream;
+      import java.io.PrintStream;
+      
+      import static org.junit.Assert.assertEquals;
+      
+      public class MainTest {
+          private final PrintStream standardOut = System.out;
+          private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+      
+          @Before
+          public void setUp() {
+              System.setOut(new PrintStream(outputStreamCaptor));
+          }
+      
+          @After
+          public void tearDown() {
+              System.setOut(standardOut);
+          }
+      
+          @Test
+          public void testBothNameAndSurnameInputs() {
+              simpleTest("JohnSmith@work.net", "John", "Smith");
+          }
+      
+          @Test
+          public void testLongSurnameInput() {
+              simpleTest("ABCDEFGHIJKLMNOPQRSTUVWXYYZabcdefghijklmnopqrstuvwxYYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYYZabcdefghijklmnopqrstuvwxYYZ0123456789@work.net",
+                      "ABCDEFGHIJKLMNOPQRSTUVWXYYZabcdefghijklmnopqrstuvwxYYZ0123456789", "ABCDEFGHIJKLMNOPQRSTUVWXYYZabcdefghijklmnopqrstuvwxYYZ0123456789");
+          }
+      
+          @Test
+          public void testSpecialCharactersInput() {
+              simpleTest("John$%&Smith%^@work.net", "John$%&", "Smith%^");
+          }
+      
+          @Test
+          public void testMultipleSpacesInput() {
+              simpleTest("JohnSmith@work.net", "John", "Smith");
+          }
+      
+          @Test
+          public void testMixedCaseInput() {
+              simpleTest("JoHnSmItH@work.net", "JoHn", "SmItH");
+          }
+      
+          public void simpleTest(String expectedOutput, String... inputLines) {
+              String inputString = String.join(System.lineSeparator(), inputLines);
+              InputStream inputStream = new ByteArrayInputStream(inputString.getBytes());
+              System.setIn(inputStream);
+      
+              EmployeeManagement.main(new String[0]);
+      
+              assertEquals(expectedOutput, outputStreamCaptor.toString().trim());
+          }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 26 Mar 2024 13:35:30 UTC"
+record: -1

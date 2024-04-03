@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Both classes String and StringBuilder are mutable
+    is_correct: false
+  - text: Only StringBuilder is mutable.
+    is_correct: true
+  - text: Both classes String and StringBuilder are immutable
+    is_correct: false
+  - text: Only String is mutable.
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 26 Mar 2024 13:29:41 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Immutability
+local_check: true

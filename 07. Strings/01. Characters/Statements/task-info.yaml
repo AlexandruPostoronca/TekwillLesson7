@@ -1,0 +1,33 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: It may be considered as an unsigned integer value in the range from 0 to 65535.
+    is_correct: true
+  - text: It may be considered as a signed integer value in the range from -32768 to
+      32767.
+    is_correct: false
+  - text: "It represents a single character such as '0', 'A', 'b'."
+    is_correct: true
+  - text: "It has a minimum value of '\0' and a maximum value of '\uffff'."
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 22 Mar 2024 16:01:10 UTC"
+record: -1
+selected_options:
+  - 0
+  - 2
+  - 3
+local_check: true

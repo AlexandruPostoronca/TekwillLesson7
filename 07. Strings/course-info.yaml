@@ -1,0 +1,23 @@
+title: 07. Strings
+language: English
+summary: |-
+  This is an introductory about Java String and StringBuilder classes.
+  - 01. Characters
+  - 02. String
+  - 03. Processing strings
+  - 04. Text Blocks
+  - 05. StringBuilder
+  - 06. Formatted output
+programming_language: Java
+content:
+  - 01. Characters
+  - 02. String
+  - 03. Processing strings
+  - 04. Text Blocks
+  - 05. StringBuilder
+  - 06. Formatted output
+mode: Study
+environment_settings:
+  jvm_language_level: JDK_1_6
+vendor:
+  name: Alexandru Umaneț
