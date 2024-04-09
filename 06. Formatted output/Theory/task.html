@@ -1,0 +1,158 @@
+<h2>Formatted output</h2>
+<h4>Introduction</h4>
+<p>You are already familiar with the <code>System.out.print()</code> and <code>System.out.println()</code> methods to
+    print output to the console. But when you need complex <strong>formatting </strong>of output, these two methods are
+    not really helpful. There are two methods that you can use in such cases, namely, <code>System.out.printf()</code>
+    and <code>String.format()</code>. Let's discuss them in detail and focus on string and number formatting. </p>
+
+<h4>Introducing the printf() method</h4>
+<p>The <code>printf()</code> method usually has two parts. First, you give the string you want to format as the first
+    attribute. This string itself includes rules to format it via <strong>format specifiers</strong>. Some examples of
+    format specifiers are<strong> </strong><code>%d</code>, <code>%s</code>, etc. In the second part, you give the
+    argument list that Java can use to format the string according to the format specifiers. </p>
+<p>See the following example to understand the different parts of the <code>printf()</code> function. </p>
+<pre><code>System.out.printf("My Name is %s. I was born in %d", "Mike", 1998);</code></pre>
+<ul>
+    <li>The first part is <code>"My Name is %s. I was born in %d"</code>, where <code>%s</code> and <code>%d</code> are
+        the format specifiers.
+    </li>
+    <li>The second part is the argument list: <code>"Mike", 1998</code> .</li>
+</ul>
+
+<h4>Different use cases of printf()</h4>
+<p>It's time to know the different use cases of format-specifiers. It's quite easy to understand it with code samples.
+    Let's try now. </p>
+<p> You can display an integer with the <code>%d</code> format specifier.</p>
+<pre><code>public static void main(String[] args){
+    System.out.printf("Display a Number %d", 15000);
+}</code></pre>
+<p>Java will replace <code>%d</code> with 15000. The output of the above code is <code>Display a Number 15000</code>.
+</p>
+<p>If you want several integers to be displayed in the output, use several <code>%d</code> specifiers.</p>
+<pre><code>public static void main(String[] args){
+    System.out.printf("The sum of %d and %d is %d", 15, 40, 55);
+}</code></pre>
+<p>Java will put each argument in place of <code>%d</code>, starting from the left. The output of the above code is
+    <code>The sum of 15 and 40 is 55</code>.</p>
+<p>If you want to display a floating-point value, use the <code>%f</code> specifier. </p>
+<pre><code>public static void main(String[] args){
+    System.out.printf("Display a Number %f", 15.23);
+}</code></pre>
+<p>Similar to the above cases, Java will put 15.23 in place of <code>%f</code>. The above code will produce the
+    following output. <code>Display a Number 15.230000</code> Although it's technically correct, it looks ugly. You
+    don't want so many trailing zeros. You can set the number's <strong>precision </strong>with the
+    <code>printf()</code> method. </p>
+<pre><code>public static void main(String[] args){
+    System.out.printf("Display a Number %.2f", 15.23);
+}</code></pre>
+<p><code>.2f</code> decides that the number of digits that should appear after the <strong>decimal </strong>place is
+    two. The code given above will output <code>Display a Number 15.23</code>.</p>
+<p>Similarly, you can display Characters and Strings with the <code>printf()</code> method. Take a look at the following
+    code. If you want to print a character, use <code>%c</code>, and if you want to print a String, use <code>%s</code>.
+</p>
+<pre><code>public static void main(String[] args){
+    char abbr = 'H';
+    String element = "Hydrogen";
+    System.out.printf("%c stands for %s", abbr, element);
+}</code></pre>
+<p>When this code runs, the value of the <code>abbr</code> variable will replace <code>%c</code> and the value of the
+    <code>element</code> variable will replace <code>%s</code>. The output of the above code is <code>H stands for
+        Hydrogen</code>. That's all about the <code>printf()</code> method. Let's move on to learn about the <code>String.format()</code>
+    method.</p>
+
+<h4>The String.format() Method</h4>
+<p>The <code>format()</code> method in the <code>String</code> class works very much like the <code>printf()</code>
+    method. The main difference here is that it returns a string instead of printing it. Let's see several examples.
+</p>
+<p>The following code formats an integer using it.</p>
+<pre><code>public static void main(String[] args){
+    int age = 22;
+    String str = String.format("My age is %d", age);
+    System.out.println(str);
+}</code></pre>
+<p>When you execute this code, Java will create a String called <code>str</code> by concatenating <code>My age is</code>
+    with the value of the <code>age</code> variable. Then it will print the value of <code>str</code>. The output is:
+</p>
+<pre><code>My age is 22</code></pre>
+<p>Similarly, you can format other data types as well. See the following code. </p>
+<pre><code>public static void main(String[] args){
+    int age = 22;
+    char initial = 'M';
+    String surname = "Anderson";
+    double height = 1.72;
+
+    String details = String.format(
+            "My name is %c. %s.%nMy age is %d.%nMy height is %.2f.",
+            initial, surname, age, height);
+    System.out.println(details);
+}</code></pre>
+<p>You can see that we have used four data types in this example. Java will replace <code>%c, %s, %d, %f</code> with
+    <code>initial</code>, <code>surname</code>, <code>age</code>, and <code>height</code> respectively. <code>%n</code>
+    is the <strong>newline </strong>character that breaks the line every time it is used. The output of our code is:</p>
+<pre><code>My name is M. Anderson.
+My age is 22.
+My height is 1.72.</code></pre>
+<p>The <code>String</code> class also has a newer and slightly simpler method <code>formatted(Object... args)</code>
+    that you can use instead of the static <code>String.format</code> method. Both of them have the same method body, so
+    they are completely interchangeable. Here's how it looks in the program:</p>
+<pre><code>public static void main(String[] args) {
+    int age = 22;
+    char initial = 'M';
+    String surname = "Anderson";
+    double height = 1.72;
+
+    String details = "My name is %c. %s.%nMy age is %d.%nMy height is %.2f."
+            .formatted(initial, surname, age, height);
+
+    System.out.println(details);
+}</code></pre>
+<p>The result is exactly the same as with the <code>String.format</code> method:</p>
+<pre><code>My name is M. Anderson.
+My age is 22.
+My height is 1.72.</code></pre>
+<p>Keep in mind that <code>formatted</code> is an instance method whereas the <code>String.format</code> method is a
+    static one. You don't need to focus on this difference right now; you will learn about instance and static methods
+    in the future.</p>
+
+<h4>Summary</h4>
+<table>
+    <caption>Let's summarize what we've learned in this topic.</caption>
+    <tr>
+        <th><strong>Format-Specifier</strong></th>
+        <th><strong>datatype</strong></th>
+        <th><strong>Format printing</strong></th>
+        <th><strong>Formatting a string</strong></th>
+    </tr>
+    <tr>
+        <td>%d</td>
+        <td>int, short, byte, long</td>
+        <td>System.out.printf("Display an Integer %d",15000);</td>
+        <td>String.format("Display an Integer %d",15000)</td>
+    </tr>
+    <tr>
+        <td>%c</td>
+        <td>char</td>
+        <td>System.out.printf("Display a Character %c",'c');</td>
+        <td>String.format("Display a Character %c",'c')</td>
+    </tr>
+    <tr>
+        <td>%f</td>
+        <td>double, float</td>
+        <td>System.out.printf("Display a Floating-point Number %f",123.45);</td>
+        <td>String.format("Display a Floating-point Number %f",123.45)</td>
+    </tr>
+    <tr>
+        <td>%s</td>
+        <td>String</td>
+        <td>System.out.printf("Display a String %s","String");</td>
+        <td>String.format("Display a String %s","String")</td>
+    </tr>
+</table>
+
+<h4>Conclusion</h4>
+<p>When you are writing complex applications, combining strings and variables with a <code>+</code> sign is not
+    recommended. The <code>printf()</code> and <code>format()</code> methods are specifically created for that. Both
+    these methods work exactly the same way except that the <code>printf() </code>method prints the output, while the
+    <code>format()</code> method returns a <code>String</code>. In this article, you have learned most of the uses of
+    both functions. Enjoy it. </p>
+

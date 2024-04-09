@@ -1,0 +1,36 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "str[n] returns a character that has the index n."
+    is_correct: false
+  - text: "str.substring(0, 5) returns a substring from 0 to 4 indexes (inclusive) of\
+    \ the string."
+    is_correct: true
+  - text: str.get(n) returns a character that has the index n.
+    is_correct: false
+  - text: "str.substring(0, 3) returns a substring from 0 to 3 indexes (inclusive) of\
+    \ the string."
+    is_correct: false
+  - text: str.charAt(n) returns a character that has the index n.
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 22 Mar 2024 16:14:11 UTC"
+record: -1
+selected_options:
+  - 1
+  - 4
+custom_name: Statements
+local_check: true

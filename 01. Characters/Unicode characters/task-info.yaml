@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: f
+    is_correct: true
+  - text: ch
+    is_correct: false
+  - text: \u0036
+    is_correct: false
+  - text: 102
+    is_correct: false
+  - text: "The code can't be compiled, because '+' is illegal here."
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 22 Mar 2024 16:03:34 UTC"
+record: -1
+selected_options:
+  - 0
+custom_name: Unicode characters
+local_check: true

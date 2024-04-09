@@ -1,0 +1,73 @@
+type: edu
+custom_name: Replacing a with b
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      import java.util.Scanner;
+      
+      public class Main {
+          public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              // Write your solution here
+          }
+      }
+    learner_created: false
+  - name: test/MainTest.java
+    visible: false
+    text: |-
+      import org.junit.After;
+      import org.junit.Before;
+      import org.junit.Test;
+      
+      import java.io.ByteArrayInputStream;
+      import java.io.ByteArrayOutputStream;
+      import java.io.InputStream;
+      import java.io.PrintStream;
+      
+      import static org.junit.Assert.assertEquals;
+      
+      public class MainTest {
+          private final PrintStream standardOut = System.out;
+          private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+      
+          @Before
+          public void setUp() {
+              System.setOut(new PrintStream(outputStreamCaptor));
+          }
+      
+          @After
+          public void tearDown() {
+              System.setOut(standardOut);
+          }
+      
+          @Test
+          public void testReplaceAWithB() {
+              simpleTest("aba", "bbb");
+          }
+      
+          @Test
+          public void testReplaceAWithB_noA() {
+              simpleTest("bcd", "bcd");
+          }
+      
+          @Test
+          public void testReplaceAWithB_onlyA() {
+              simpleTest("aaa", "bbb");
+          }
+      
+          public void simpleTest(String inputString, String expectedOutput) {
+              InputStream inputStream = new ByteArrayInputStream(inputString.getBytes());
+              System.setIn(inputStream);
+      
+              Main.main(new String[0]);
+      
+              assertEquals(expectedOutput, outputStreamCaptor.toString().trim());
+          }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 22 Mar 2024 16:28:07 UTC"
+record: -1

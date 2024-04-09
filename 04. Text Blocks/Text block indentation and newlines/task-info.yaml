@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: A
+    is_correct: true
+  - text: B
+    is_correct: false
+  - text: C
+    is_correct: false
+  - text: D
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 26 Mar 2024 12:57:37 UTC"
+record: -1
+selected_options:
+  - 0
+custom_name: Text block indentation and newlines
+local_check: true

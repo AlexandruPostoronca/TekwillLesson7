@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-03-25T22:15:46" hostname="DESKTOP-A97GDF4" time="0.007">
+  <properties/>
+  <testcase name="testStringDoesNotStartWithJ" classname="MainTest" time="0.005"/>
+  <testcase name="testEmptyString" classname="MainTest" time="0.001"/>
+  <testcase name="testNullString" classname="MainTest" time="0.0"/>
+  <testcase name="testStringStartsWithJ" classname="MainTest" time="0.0"/>
+  <testcase name="testStringStartsWithLowercaseJ" classname="MainTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-03-22T16:28:06" hostname="DESKTOP-A97GDF4" time="0.007">
+  <properties/>
+  <testcase name="testReplaceAWithB" classname="MainTest" time="0.006"/>
+  <testcase name="testReplaceAWithB_noA" classname="MainTest" time="0.0"/>
+  <testcase name="testReplaceAWithB_onlyA" classname="MainTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

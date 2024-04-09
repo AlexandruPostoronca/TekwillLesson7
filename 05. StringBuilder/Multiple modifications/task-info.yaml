@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: to invoke methods length and charAt multiple times.
+    is_correct: false
+  - text: to concatenate multiple strings into a single one.
+    is_correct: true
+  - text: to remove elements from a string multiple times.
+    is_correct: true
+  - text: to create a simple string and display it to the standard output.
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 26 Mar 2024 19:19:19 UTC"
+record: -1
+selected_options:
+  - 1
+  - 2
+custom_name: Multiple modifications
+local_check: true

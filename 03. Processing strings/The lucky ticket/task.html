@@ -1,0 +1,35 @@
+<h2>The lucky ticket</h2>
+<p>Paul loves to ride public transport and after receiving a ticket, he immediately checks whether he got a lucky one. A
+    ticket is considered a lucky one if the sum of the first three numbers of this ticket matches the sum of the last
+    three numbers.</p>
+
+<p>However, Paul does not count well in his head. That is why he asks you to write a program which will check the
+    equality of the sums and display "Lucky" if the sums match, and "Regular" if the sums differ.</p>
+
+<p>A string of six digits is provided as input to the program.</p>
+
+<p>You need to print out only the word <strong>"Lucky"</strong> or <strong>"Regular"</strong> with a capital letter
+    (without quotes).</p>
+
+<button onclick="getElementById('hint-678').style.display='inline'">
+    Hint
+</button>
+<div id="hint-678" style="display:none;">
+    <p>To get the <code>int</code> value that the character actually represents, you can use the
+        <code>Character.getNumericValue()</code> method
+    </p>
+    <pre><code>char charValue = '2';
+int intValue = Character.getNumericValue(charValue); // 2</code>
+    </pre>
+
+    <p>This is an incorrect way to get the <code>int</code> value:</p>
+    <code>int intValue = (int) charValue; // 50, which is the ASCII code for character ‘2’</code>
+</div>
+<div>
+    <p><strong>Sample Input 1: </strong><code>090234</code></p>
+    <p><strong> Sample Output 1: </strong><code>Lucky</code></p>
+</div>
+<div>
+    <p><strong> Sample Input 2: </strong><code>123456</code></p>
+    <p><strong> Sample Output 2: </strong><code>Regular</code></p>
+</div>

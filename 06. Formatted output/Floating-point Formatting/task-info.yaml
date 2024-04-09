@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: It will print an error
+    is_correct: false
+  - text: 35.000000 23.340000
+    is_correct: true
+  - text: 35 23.340000
+    is_correct: false
+  - text: 35 23.34
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 26 Mar 2024 19:58:40 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Floating-point Formatting
+local_check: true

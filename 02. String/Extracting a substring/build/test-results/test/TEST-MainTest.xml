@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-03-22T16:56:47" hostname="DESKTOP-A97GDF4" time="0.013">
+  <properties/>
+  <testcase name="testSubstringEntireString" classname="MainTest" time="0.007"/>
+  <testcase name="testSubstringWithinBounds" classname="MainTest" time="0.001"/>
+  <testcase name="testSubstringFirstCharacter" classname="MainTest" time="0.001"/>
+  <testcase name="testSubstringOutOfRange1" classname="MainTest" time="0.001"/>
+  <testcase name="testSubstringOutOfRange2" classname="MainTest" time="0.001"/>
+  <testcase name="testSubstringOutOfRange3" classname="MainTest" time="0.001"/>
+  <testcase name="testSubstringLastCharacter" classname="MainTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
